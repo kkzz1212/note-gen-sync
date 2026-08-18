@@ -1,7 +1,10 @@
 {
-  "textToSpeechMode": "auto",
+  "giteaInstanceType": "gitea.com",
+  "globalSearchFilter": "all",
   "currentAi": "",
-  "giteaCustomUrl": "",
+  "version": "0.34.1",
+  "showEditorUndoRedo": true,
+  "agentSystemPromptExtension": "",
   "promptList": [
     {
       "content": "请你扮演一个笔记软件的智能助手，可以参考记录内容，使用 markdown 语法，回答用户的问题。",
@@ -10,19 +13,105 @@
       "title": "写作助手"
     }
   ],
-  "agentSystemPromptExtension": "",
-  "enableImageRecognition": true,
-  "commitModel": "note-gen-chat",
+  "useImageRepo": false,
+  "fixedRecordTagId": null,
+  "editorViewMode": "visual",
+  "textToSpeechMode": "auto",
+  "giteaAutoSync": "disabled",
+  "canvasGridStyle": "dots",
+  "leftSidebarTab": "notes",
   "imageMethodModel": "",
-  "autoUpdate": true,
-  "recordSortMode": "newest",
-  "autoPullOnOpen": true,
-  "gitlabCustomUrl": "",
-  "previewTheme": "github",
-  "recordViewMode": "list",
+  "editorModel": "",
+  "canvasManagerViewMode": "grid",
+  "recordTextSize": "sm",
+  "rerankingModel": "",
+  "editorContentWidth": "full",
+  "canvasGridVisible": true,
+  "showMobileEditorToolbar": true,
+  "language": "简体中文",
+  "canvasSnapToGrid": false,
+  "audioModel": "",
+  "outlinePosition": "right",
+  "giteaCustomUrl": "",
+  "autoSync": "5",
   "gitlabInstanceType": "gitlab.com",
-  "sttModel": "note-gen-free-note-gen-stt",
+  "shortcuts": [
+    {
+      "key": "openWindow",
+      "value": "CommandOrControl+Shift+W"
+    },
+    {
+      "key": "screenshotRecord",
+      "value": "CommandOrControl+Shift+S"
+    },
+    {
+      "key": "quickRecordText",
+      "value": "CommandOrControl+Shift+T"
+    }
+  ],
+  "gitlabCustomUrl": "",
+  "recordCompletionBehavior": "highlight",
+  "canvasInsertBehavior": "select",
+  "darkMode": "system",
+  "speechToTextMode": "auto",
   "canvasManagerSortMode": "updated",
+  "giteaUsername": "",
+  "currentPromptId": "0",
+  "autoPullOnOpen": true,
+  "ragStructuredKnowledgeConsent": true,
+  "editorLineHeight": "comfortable",
+  "recordSaveTargetMode": "current",
+  "canvasGridGap": 20,
+  "placeholderModel": "",
+  "agentCorePromptVersion": 3,
+  "canvasMinimapVisible": true,
+  "githubCustomImageRepo": "",
+  "fileManagerTextSize": "sm",
+  "recordViewMode": "list",
+  "showEditorStats": true,
+  "autoUpdate": true,
+  "agentPermissionMode": "ask",
+  "enableImageRecognition": true,
+  "gitlabUsername": "",
+  "recordToolbarConfig": [
+    {
+      "enabled": true,
+      "id": "text",
+      "order": 0
+    },
+    {
+      "enabled": true,
+      "id": "recording",
+      "order": 1
+    },
+    {
+      "enabled": true,
+      "id": "scan",
+      "order": 2
+    },
+    {
+      "enabled": true,
+      "id": "image",
+      "order": 3
+    },
+    {
+      "enabled": true,
+      "id": "link",
+      "order": 4
+    },
+    {
+      "enabled": true,
+      "id": "file",
+      "order": 5
+    },
+    {
+      "enabled": true,
+      "id": "todo",
+      "order": 6
+    }
+  ],
+  "gitlabAutoSync": "disabled",
+  "jsdelivr": true,
   "templateList": [
     {
       "content": "整理成一篇详细完整的笔记。\n满足以下格式要求：\n- 如果是代码，必须完整保留，不要随意生成。\n- 文字复制的内容尽量不要修改，只处理格式化后的内容。",
@@ -39,46 +128,220 @@
       "title": "周报"
     }
   ],
-  "fileManagerTextSize": "sm",
-  "fixedRecordTagId": null,
-  "gitlabAutoSync": "disabled",
-  "jsdelivr": true,
-  "showEditorStats": true,
-  "editorContentWidth": "full",
-  "primaryModel": "note-gen-chat",
-  "recordTextSize": "sm",
-  "recordCompletionBehavior": "highlight",
-  "gitlabUsername": "",
-  "audioModel": "",
-  "showSourceLineNumbers": true,
-  "showEditorUndoRedo": true,
-  "canvasGridStyle": "dots",
-  "enableOutline": false,
-  "outlinePosition": "right",
-  "canvasSnapToGrid": false,
+  "sttModel": "note-gen-free-note-gen-stt",
+  "editorShortcuts": [
+    {
+      "id": "undo",
+      "value": "Mod+Z"
+    },
+    {
+      "id": "redo",
+      "value": "Shift+Mod+Z"
+    },
+    {
+      "id": "setParagraph",
+      "value": "Mod+Alt+0"
+    },
+    {
+      "id": "toggleHeading1",
+      "value": "Mod+Alt+1"
+    },
+    {
+      "id": "toggleHeading2",
+      "value": "Mod+Alt+2"
+    },
+    {
+      "id": "toggleHeading3",
+      "value": "Mod+Alt+3"
+    },
+    {
+      "id": "toggleHeading4",
+      "value": "Mod+Alt+4"
+    },
+    {
+      "id": "toggleHeading5",
+      "value": "Mod+Alt+5"
+    },
+    {
+      "id": "toggleHeading6",
+      "value": "Mod+Alt+6"
+    },
+    {
+      "id": "openSearch",
+      "value": "Mod+F"
+    },
+    {
+      "id": "openSlashCommand",
+      "value": "Mod+/"
+    },
+    {
+      "id": "toggleOutline",
+      "value": "Shift+Mod+O"
+    },
+    {
+      "id": "toggleBold",
+      "value": "Mod+B"
+    },
+    {
+      "id": "toggleItalic",
+      "value": "Mod+I"
+    },
+    {
+      "id": "toggleStrike",
+      "value": "Shift+Mod+S"
+    },
+    {
+      "id": "toggleUnderline",
+      "value": "Mod+U"
+    },
+    {
+      "id": "toggleInlineCode",
+      "value": "Mod+E"
+    },
+    {
+      "id": "toggleHighlight",
+      "value": "Shift+Mod+H"
+    },
+    {
+      "id": "openLinkInput",
+      "value": "Mod+K"
+    },
+    {
+      "id": "toggleBlockquote",
+      "value": "Shift+Mod+B"
+    },
+    {
+      "id": "toggleBulletList",
+      "value": "Shift+Mod+8"
+    },
+    {
+      "id": "toggleOrderedList",
+      "value": "Shift+Mod+7"
+    },
+    {
+      "id": "toggleTaskList",
+      "value": "Shift+Mod+9"
+    },
+    {
+      "id": "toggleCodeBlock",
+      "value": "Mod+Alt+C"
+    },
+    {
+      "id": "openAiMenu",
+      "value": "Mod+J"
+    },
+    {
+      "id": "aiContinue",
+      "value": "Shift+Mod+J"
+    },
+    {
+      "id": "aiPolish",
+      "value": ""
+    },
+    {
+      "id": "aiConcise",
+      "value": ""
+    },
+    {
+      "id": "aiExpand",
+      "value": ""
+    },
+    {
+      "id": "aiTranslate",
+      "value": ""
+    },
+    {
+      "id": "acceptAiSuggestion",
+      "value": "Mod+Enter"
+    },
+    {
+      "id": "rejectAiSuggestion",
+      "value": "Escape"
+    },
+    {
+      "id": "abortAiGeneration",
+      "value": "Mod+."
+    },
+    {
+      "id": "insertTable",
+      "value": "Mod+Alt+T"
+    },
+    {
+      "id": "addColumnBefore",
+      "value": ""
+    },
+    {
+      "id": "addColumnAfter",
+      "value": ""
+    },
+    {
+      "id": "addRowBefore",
+      "value": ""
+    },
+    {
+      "id": "addRowAfter",
+      "value": ""
+    },
+    {
+      "id": "deleteColumn",
+      "value": ""
+    },
+    {
+      "id": "deleteRow",
+      "value": ""
+    },
+    {
+      "id": "deleteTable",
+      "value": ""
+    },
+    {
+      "id": "alignLeft",
+      "value": "Shift+Mod+L"
+    },
+    {
+      "id": "alignCenter",
+      "value": "Shift+Mod+E"
+    },
+    {
+      "id": "alignRight",
+      "value": "Shift+Mod+R"
+    },
+    {
+      "id": "insertImage",
+      "value": "Shift+Mod+I"
+    },
+    {
+      "id": "insertInlineMath",
+      "value": "Mod+Alt+M"
+    },
+    {
+      "id": "insertBlockMath",
+      "value": "Shift+Mod+Alt+M"
+    },
+    {
+      "id": "insertMermaid",
+      "value": "Mod+Alt+D"
+    },
+    {
+      "id": "insertHorizontalRule",
+      "value": "Mod+Alt+-"
+    }
+  ],
   "canvasDefaultZoom": 1,
-  "githubCustomImageRepo": "",
-  "placeholderModel": "",
-  "giteaUsername": "",
-  "embeddingModel": "note-gen-embedding",
-  "canvasManagerViewMode": "grid",
-  "agentCorePromptVersion": 3,
-  "currentTagId": 1,
-  "canvasInsertBehavior": "select",
-  "autoSync": "5",
-  "useImageRepo": false,
-  "editorViewMode": "visual",
-  "editorSourceWrap": true,
-  "editorLineHeight": "comfortable",
   "markDescModel": "note-gen-chat",
-  "currentPromptId": "0",
-  "agentPermissionMode": "ask",
-  "giteaInstanceType": "gitea.com",
-  "ragStructuredKnowledgeConsent": true,
-  "canvasGridVisible": true,
+  "embeddingModel": "note-gen-embedding",
+  "completionModel": "note-gen-chat",
+  "showSourceLineNumbers": true,
+  "currentTagId": 1,
+  "recordSortMode": "newest",
+  "commitModel": "note-gen-chat",
+  "canvasWheelBehavior": "zoom",
+  "giteeAutoSync": "disabled",
+  "enableOutline": false,
+  "previewTheme": "github",
+  "editorSourceWrap": true,
   "githubUsername": "kkzz1212",
-  "darkMode": "system",
-  "canvasGridGap": 20,
+  "primaryModel": "note-gen-chat",
   "customThemeColors": {
     "dark": {
       "accent": null,
@@ -117,54 +380,5 @@
       "thirdForeground": null
     }
   },
-  "completionModel": "note-gen-chat",
-  "language": "简体中文",
-  "recordToolbarConfig": [
-    {
-      "enabled": true,
-      "id": "text",
-      "order": 0
-    },
-    {
-      "enabled": true,
-      "id": "recording",
-      "order": 1
-    },
-    {
-      "enabled": true,
-      "id": "scan",
-      "order": 2
-    },
-    {
-      "enabled": true,
-      "id": "image",
-      "order": 3
-    },
-    {
-      "enabled": true,
-      "id": "link",
-      "order": 4
-    },
-    {
-      "enabled": true,
-      "id": "file",
-      "order": 5
-    },
-    {
-      "enabled": true,
-      "id": "todo",
-      "order": 6
-    }
-  ],
-  "rerankingModel": "",
-  "version": "0.34.1",
-  "recordSaveTargetMode": "current",
-  "showMobileEditorToolbar": true,
-  "codeTheme": "github",
-  "canvasMinimapVisible": true,
-  "editorModel": "",
-  "canvasWheelBehavior": "zoom",
-  "giteeAutoSync": "disabled",
-  "giteaAutoSync": "disabled",
-  "speechToTextMode": "auto"
+  "codeTheme": "github"
 }
